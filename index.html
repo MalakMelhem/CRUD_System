@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <!-- sweet alert -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.33/sweetalert2.css" integrity="sha512-e+TwvhjDvKqpzQLJ7zmtqqz+5jF9uIOa+5s1cishBRfmapg7mqcEzEl44ufb04BXOsEbccjHK9V0IVukORmO8w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="style.css">
+   <style>
+    .error{
+        background-color: #f8d7da;
+        display:none;
+        margin-top: -10px;
+        width: 416px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+   </style>
+</head>
+<body>
+
+    <div class="add-course">
+       
+        <div class="container">
+
+            <h1>CRUD System</h1>
+
+        <label for="">course name</label>
+        <input type="text" name="cName" placeholder="course name"  id="courseName">
+        <p>username must start with capital letter and contain 3-15 characters</p>
+
+        <label for="">course category</label>
+        <input type="text" name="cCategory" placeholder="course category"  id="courseCategory">
+        <p>category must start with capital letter and contain 3-15 characters</p>
+
+        <label for="">course price</label>
+        <input type="number" name ="cPrice" placeholder="course price" id="coursePrice" >
+        <p>please enter a number</p>
+
+        <label for="">course description</label>
+        <textarea id="courseDescription" placeholder="course description"></textarea>
+    
+        <button onclick="createCourse()">Add Cource</button>
+        <button onclick="clearInput()">clear</button>
+
+
+
+    </div>
+
+    <input type="search" onkeyup="searchCourse()" placeholder="search... " id="search" >
+
+
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>id</th>
+                <th>name</th>
+                <th>price</th>
+                <th>description</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+        </thead>
+
+        <tbody id="data">
+            
+        </tbody>
+    </table>
+    </div>
+    
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/11.4.33/sweetalert2.min.js" integrity="sha512-cYg5I1IgQJ3PudSiA/J3W15Q2zkgB+bbv7aKm0GuSvIineIx7jsSTc+iXGu0AyJOvdI6vWJkvJe97bVF3POQHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="main.js"></script>
+</body>
+</html>
